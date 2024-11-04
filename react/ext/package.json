@@ -1,5 +1,5 @@
 {
-  "name": "react-chrome-extension",
+  "name": "Scripter",
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --config webpack.config.js",
