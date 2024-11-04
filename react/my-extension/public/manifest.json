@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "ScriptAutoRunner",
+    "version": "0.1.0",
+    "description": "Run script by github gists",
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": {
+        "192": "logo192.png",
+        "512": "logo512.png"
+      }
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "permissions": ["storage", "activeTab"]
+  }
