@@ -20,7 +20,8 @@
     data: {
       power: true,
       scripts: [],
-      options: {}
+      options: {},
+      version: null
     },
     methods: {
       toggleSwitch() {
@@ -123,11 +124,22 @@
         else {
           this.$els.setting.classList.add('show');
         }
+      },
+      _checkVersion(){
+        fetch('./manifest.json')
+          .then((response) => response.json())
+          .then((data) => {
+            debugger
+            this.$set('version', data.version);
+          })
+          .catch((error) => console.error('Error fetching JSON:', error));
+        
       }
     },
     created() {
       this._init();
       this._loadScripts();
+      this._checkVersion();
       this.save = this._save();
     },
     ready() {

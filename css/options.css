@@ -436,3 +436,14 @@
   .sra-flex--foot .icon-cloud-flash {
     font-size: 18px;
   }
+
+
+  .sra-version{
+    position: absolute;
+    color: grey;
+    bottom: 0;
+    right: 0;
+    margin: 0 1em 1em 0;
+    z-index: 10;
+    font-weight: 700;
+  }
