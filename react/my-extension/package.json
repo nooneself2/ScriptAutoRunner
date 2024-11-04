@@ -1,48 +1,24 @@
 {
-  "name": "ScriptAutoRunner",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.119",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "ajv": "^8.17.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
-    "typescript": "^5.6.3",
-    "web-vitals": "^2.1.4"
-  },
+  "name": "react-chrome-extension",
+  "version": "1.0.0",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build && copyfiles -u 1 public/manifest.json build/ && copyfiles -u 1 public/background.js build/",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "webpack --config webpack.config.js",
+    "watch": "webpack --watch --config webpack.config.js",
+    "dev": "webpack serve --config webpack.dev.js --open --live-reload --hot"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "copyfiles": "^2.4.1"
+    "@types/chrome": "^0.0.254",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "ts-loader": "^9.0.0",
+    "typescript": "^5.0.0",
+    "webpack": "^5.0.0",
+    "webpack-cli": "^5.0.0",
+    "webpack-dev-server": "^5.1.0"
   }
 }
