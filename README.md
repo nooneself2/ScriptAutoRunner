@@ -49,6 +49,14 @@ github.io, github.com
 ```
 
 
+#### Deep-linking hostname
+Run script with specific *path*
+```
+github.com/notifications, github.com/new
+```
+
+
+
 ### Temporary disable
 
 When you would like to disable Scripts temporary.
